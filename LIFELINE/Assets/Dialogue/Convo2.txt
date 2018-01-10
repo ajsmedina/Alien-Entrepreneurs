@@ -1,0 +1,32 @@
+Char;Isaac;0;0;2
+Char;Vagnr;1;0;4
+Isaac;Hello!
+Isaac;Where are we?
+Vagnr;Where are you?
+Vagnr;Gettin outta here!
+Isaac;You're mean.
+Vagnr;Yeah? Well fight me!
+Isaac;No, you're ugly.
+
+Cmd;Isaac;MoveWait;7
+
+Vagnr;Isaac? Where are you???
+Vagnr;...
+
+Char;Aliis;2;0;-1
+
+Aliis;Oh hi, Vagnr. What's up?
+
+Cmd;Aliis;MoveWait;2
+
+Aliis;How's your day?
+
+Cmd;Aliis;Change;0;0
+
+Vagnr;You're isaac now
+
+Isaac;There are two of me!
+Aliis;No im still Aliis!
+Vagnr;Liar!
+Cmd;Vagnr;Move;10
+Aliis;Vagnr?

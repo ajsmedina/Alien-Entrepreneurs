@@ -1,0 +1,37 @@
+Char; Bernard; 1; 0; 3
+Char; Cordea; 3; 0; 6
+
+Cordea; Hey, Bernard, can I ask you something?
+Bernard; Oh, hey Dea. What's up?
+Cordea; Why do you fight?
+Bernard; Huh?
+Cordea; Why are you here with the Captain and Eliza? What's your reason?
+
+Bernard; Oh, hmm...
+Bernard; Well...
+Cordea; Is something wrong?
+
+Bernard; It's a little sad... and embarrassing.
+Bernard; The thing is that I come from a family of Mystik Healers.
+Bernard; My parents, grandparents, siblings, they're all healers.
+Bernard; But I can't heal. It just happens to be that offensive Mystiks are easier for me.
+Bernard; Though it's not like conjuring fireballs could make my parents proud.
+
+Cordea; So you decided to fight with it? For your kingdom?
+
+Bernard; Well, it wasn't just like that. 
+Bernard; I had gotten into a fight with my parents one day - I've always been a disappointment it seems.
+Bernard; I stormed off and just ran. I just kept on running.
+Bernard; I ended up sitting on a park bench, and I..
+
+Cordea; What's with that weird look on your face?
+
+Bernard; I met him.
+
+Cordea; Who?
+
+Bernard; Well that's enough of my story for now. C'mon, it's time to head out again!
+
+Cmd; Bernard; Move; -2
+
+Cordea; Bernard...?

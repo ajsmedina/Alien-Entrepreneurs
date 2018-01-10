@@ -1,0 +1,58 @@
+Char; Norman; 0; 0; -2
+Char; Bernard; 1; 0; -4
+Char; Eliza; 2; 0; 11
+
+Cmd; Norman; Move; 4
+Cmd; Bernard; MoveWait; 2
+
+Bernard; How much have they built underground?!
+Bernard; This whole complex is so obnoxiously large.
+
+???; Norm! Bernie!
+
+Norman; That voice...
+
+Cmd; Eliza; MoveWait; 3
+
+Eliza; I'm so glad to see you two!
+
+Norman; Eliza? What are you doing here?
+Norman; I thought you were staying home with the kids!
+
+Cmd; Eliza; Move; 6
+
+Eliza; Don't worry, Aria and Ciel are with my sister.
+Eliza; Sam was sick so I joined the pincer group who infiltrated the other side.
+
+Bernard; So where's the group?
+
+Eliza; ...
+
+Bernard; Eliza?
+
+Eliza; They're dead.
+
+Norman; Dead?
+Nomran; How...?
+
+Eliza; There was... a strange girl.
+
+Bernard; A squad of four veteran guards were taken down by a single enemy?
+
+Eliza; I don't know how, but... she was strong.
+Eliza; Norman, we have to get out of here.
+
+Norman; Well, we can't exactly go back that way.
+
+Bernard; It was the captain's fault.
+
+Norman; So I guess we'll need to keep moving forward.
+Norman; Maybe we can find the information we need deeper inside.
+
+Eliza; Okay. But please, we must tread carefully.
+
+Norman; Can you still fight?
+
+Eliza; Yes. But if we see her, we run, OK?
+
+Norman; Okay, Eliza. We'll be safe, don't worry.

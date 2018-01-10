@@ -1,0 +1,33 @@
+Char; Norman; 0; 0; 1; Right
+Char; Cordea; 3; 0; 3
+Char; Bernard; 1; 0; 7
+Char; Eliza; 2; 0; 10
+
+
+Bernard; Hmm? Cordea and the Captain? I wonder what's going on.
+
+Cordea; So how much? Six inches? Eight?
+Norman; Nope, more like ten inches.
+Cordea; You're lying! There's no way it's ten!
+
+Bernard; (Holy crap, are they talking about...?); Right
+Bernard; (TEN INCHES??????!!?!!)
+
+Cmd; Eliza; MoveWait; 5
+
+Eliza; Hey, Berns! What are you making that face for?; Right
+
+Bernard; Oh, Eliza, you lucky soul.; Left
+
+Eliza; Huh?
+
+Bernard; I need a moment.; Right
+
+Cmd; Bernard; Move; 11
+
+Eliza; Hmm...alright...
+Eliza; Hey, you two! What're you talking about?; Left
+
+Norman; We're comparing heights.
+Cordea; Yep. Norman is eight inches taller than me.; Right
+Eliza; I wonder what Bernard was freaking out about...?

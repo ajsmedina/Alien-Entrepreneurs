@@ -1,0 +1,19 @@
+Char; Norman; 0; 0; 0; Right
+Char; Bernard; 1; 0; 0; Right
+Char; Grunt; 2;0; 10
+
+Cmd; Norman; Move; 3
+Cmd; Bernard; MoveWait; 6
+
+Bernard; Okay, so we got in just fine.; Left
+Bernard; Now we just need to sneak into that secret entrance they have!
+Norman; Um, Bernard...
+
+Cmd; Grunt; Move; 7
+Grunt; Hey, who are you?!
+
+Bernard; Uh-oh!; Right
+
+Norman; Looks like we'll have to fight our way through this one!
+
+Cmd; TriggerBattle; 0; Main/1-Intro_PostBattle

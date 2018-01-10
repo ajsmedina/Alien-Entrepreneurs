@@ -1,0 +1,31 @@
+Char; Isaac; 0; 0; 2
+
+Char; Vagnr; 1; 0; 4
+
+Isaac; 1
+
+Vagnr; 2
+
+Isaac; 3
+
+Vagnr; 4
+
+if; InParty; 3
+
+	Char; Deus; 3; 0; 6
+	Deus; Hey guys!
+	Isaac; Hey Deus!
+
+	if; InParty; 2
+		Char; Aliis; 2; 0; 8
+		Aliis; I'm here too!
+	end; 
+
+else; 
+
+	Isaac; Hmm, where's Deus?
+	Aliis; I'm not sure...
+
+end; 
+
+Vagnr; Bye!

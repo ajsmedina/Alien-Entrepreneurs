@@ -1,0 +1,4 @@
+Char; Norman; 0; 0; 1
+
+Norman; Hi!
+System; AddItems; i0; 5; i1; 5

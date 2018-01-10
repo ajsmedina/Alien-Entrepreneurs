@@ -1,0 +1,50 @@
+Char; Bernard; 1; 0; 3
+Char; Cordea; 3; 0; 6
+Char; Norman; 0; 0; 11
+
+Cordea; Bernard!
+Bernard; Yeah, Dea?
+Cordea; Can you continue your story now?
+Bernard; Huh?
+Cordea; Y'know! You ran away and you met someone.
+Cordea; Who was he?
+
+Bernard; Oh, that. 
+Bernard; Are Norman and Eliza... no they're off over there.
+Bernard; Alright.
+
+Cordea; Great!
+
+Bernard; Well, he just happened to sit down on the bench beside me.
+Bernard; Downright handsome... and charming...
+Bernard; I'd be lying if I said I didn't start crushing on him right away.
+Bernard; I guess the sadness on my face was plain as day because he asked me what was wrong.
+Bernard; I explained everything to him. My Mystiks, my parents...
+Bernard; How much I hated being useless.
+
+Cordea; Bernard...
+
+Bernard; He put his hand on my shoulder and looked me dead in the eyes.
+Bernard; "You're not useless."
+Bernard; This stranger just told me what I've wanted to hear my whole life.
+Bernard; And I started bawling right there.
+Bernard; He told me that I could use my abilities if I join the Foronian army. They never had enough Mystivers.
+Bernard; So I did what he said, and now I have a reason to fight. To live. 
+Bernard; I can use my powers to help keep Foron safe.
+Bernard; I can use my powers to help keep <i>him</i> safe.
+Bernard; I fight so I have a purpose. So that I can prove that I'm <i>not</i> useless.
+Bernard; That man changed my life...
+Bernard; I did eventually shake off that crush and, well...
+Bernard; He's a good friend to me. I'd prefer nothing more.
+
+Cordea; Who was he?
+
+Bernard; Well, would you look at that! Eliza looks like she needs help!
+Cmd; Bernard; Move; -2
+
+Cordea; Hey, Bernard!
+Cmd; Cordea; Move; -2
+
+Cmd; Norman; MoveWait; 5
+
+Norman; Bernard...

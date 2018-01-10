@@ -1,0 +1,11 @@
+Char; Norman; 0; 0; 3
+Char; Bernard; 1; 0; 6
+
+Bernard; Whew! That was pretty easy!; Left
+
+Norman; That's true. These weak grunts are probably just here for show.
+Norman; We'll need to be careful further in.
+
+Bernard; Alright, now the coast is clear! We can head for the entrance.
+
+Norman; Let's just be careful...

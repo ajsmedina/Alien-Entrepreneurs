@@ -1,0 +1,20 @@
+Char; Norman; 0; 0; 2
+
+Norman; Bernard?; Right
+
+Norman; Bernard, where are you?
+
+Char; Bernard; 1; 0; 11
+Cmd; Bernard; MoveWait; 5
+
+Bernard; I'm here, Cap!
+
+Bernard; Thought I was a goner there! They almost got me!
+Norman; So I'm guessing that means your cover was blown?
+Bernard; Yep, sorry bout that. I think I dressed the part of a Sebresan Businessman well, though.
+Norman; No worries. You made it to the rendez-vous and that's what matters.
+Norman; So did you find an entrance?
+Bernard; That I did! Though it might be a little difficult to get there with all the grunts looking for me.
+Norman; We may just have to brute force our way through them. Are you ready for this?
+Bernard; Not really...
+Norman; Okay, great! Let's go, Berns!

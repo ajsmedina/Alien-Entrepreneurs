@@ -1,0 +1,24 @@
+Char; Norman; 0; 0; 2; Right
+Char; Bernard; 1; 0; 5
+
+
+Bernard; Hmm? What's this?
+
+Norman; Bernard, you got us stuck.
+
+Bernard; Me?! Captain, you're the one who led us in this direction!
+
+Norman; Yeah, but you're the one who caused us to fall into this pit.
+Norman; Let's just try and get out of here.; Left
+
+Bernard; We could either try to jump out, or perhaps...
+
+Norman; Is that...; Right
+Norman; A grappling hook?
+Norman; You actually brought a grappling hook with you.
+
+Bernard; Watch! This thing will be really useful!
+Bernard; You can't go adventuring without a grappling hook!;Right
+Cmd; Bernard; Move; 10
+
+Norman; I can't believe this kid...

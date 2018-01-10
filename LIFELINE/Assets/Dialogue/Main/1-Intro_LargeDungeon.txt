@@ -1,0 +1,20 @@
+Char; Norman; 0; 0; 0
+Char; Bernard; 1; 0; 0
+
+Cmd; Bernard; Move; 6
+Cmd; Norman; Move; 3
+
+Cmd; Norman; Right
+Bernard; Whoa... what the...
+Bernard; It's huge!;
+
+Norman; Strange... I didn't expect a small bandit group to have such a large hideout.
+
+Bernard; Do you think... maybe they're part of something bigger?
+
+Norman; I don't know... we'll just have to keep moving forwards.
+
+Bernard; Hmm strange...; Right
+Norman; What?
+Bernard; My grappling hook isn't catching on to some of these platforms.; Left
+Norman; I guess it just doesn't work on everything. Let's go, we can just jump across.
