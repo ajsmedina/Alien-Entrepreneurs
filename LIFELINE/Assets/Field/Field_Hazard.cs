@@ -8,28 +8,30 @@ public class Field_Hazard : MonoBehaviour {
 	public bool alwaysOn;
 	public bool flip;
 
-	// Use this for initialization
+	Field_Power pow;
+
+	/**
+	 * Initialize pow and hazard
+	 */
 	void Start () {
-		defaulthazard = this.gameObject.GetComponent<Field_Power> ().defOn;
+		pow = this.gameObject.GetComponent<Field_Power> ();
+		defaulthazard = pow.defOn;
 		isHazard = defaulthazard;
 	
 	}
-	
-	// Update is called once per frame
+
+	/**
+	 * Change hazard settings to power.
+	 */
 	void Update () {
 		if (alwaysOn) {
 			isHazard = true;
 		} else if (flip) {
-			isHazard = !this.gameObject.GetComponent<Field_Power> ().isOn;
+			isHazard = !pow.isOn;
 		} else {
-			isHazard = this.gameObject.GetComponent<Field_Power> ().isOn;
+			isHazard = pow.isOn;
 		}
 
-		if (isHazard) {
-			//this.gameObject.GetComponent<SpriteRenderer> ().color = Color.red;
-		} else {
-			//this.gameObject.GetComponent<SpriteRenderer> ().color = Color.white;
-		}
 	
 	}
 }

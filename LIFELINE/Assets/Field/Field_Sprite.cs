@@ -10,20 +10,33 @@ public class Field_Sprite : MonoBehaviour {
 
 	GameObject obj;
 	SpriteRenderer spr;
+	Field_Insulator insul;
+	Field_Door door;
+	Field_Hazard haz;
+	Moving_Platform move;
 
-	// Use this for initialization
+	/**
+	 * Initialize components
+	 */
 	void Start () {
 		obj = this.gameObject;
 		spr = this.gameObject.GetComponent<SpriteRenderer>();
+		insul = this.gameObject.GetComponent<Field_Insulator> ();
+		door = this.gameObject.GetComponent<Field_Door> ();
+		haz = this.gameObject.GetComponent<Field_Hazard> ();
+		move = this.gameObject.GetComponent<Moving_Platform> ();
 	}
 
 	
-	// Update is called once per frame
+	/**
+	 * Update sprite and colour based on variables of different components
+	 */
 	void Update () {
 
-		if (obj.GetComponent<Field_Hazard>() != null) {
-			if (obj.GetComponent<Field_Hazard> ().isHazard) {
-				if (obj.layer == 8 || (obj.GetComponent<Field_Insulator>() != null && obj.GetComponent<Field_Insulator>().insulate)) {
+		//Choose sprite based on variables
+		if (haz != null) {
+			if (haz.isHazard) {
+				if (obj.layer == 8 || (insul != null && insul.insulate)) {
 					spr.sprite = spr_metwater;
 					
 				} else {
@@ -32,35 +45,36 @@ public class Field_Sprite : MonoBehaviour {
 			} else {
 				spr.sprite = spr_ice;
 			}
-		}	else if (obj.layer == 8|| (obj.GetComponent<Field_Insulator>() != null && obj.GetComponent<Field_Insulator>().insulate)) {
+		}	else if (obj.layer == 8|| (insul != null && insul.insulate)) {
 			spr.sprite = spr_metal;
 		}  else {
 			spr.sprite = spr_sand;
 		}
 
-		if (obj.GetComponent<Moving_Platform> () != null) {
+		//Choose colour based on variables
+		if (move != null) {
 
-			if (obj.GetComponent<Field_Door> () != null) {
+			if (door != null) {
 
-				if (obj.GetComponent<Field_Door> ().open) {
+				if (door.open) {
 
-					this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (1.0f, 1.0f, 0.5f, 0.25f);
+					spr.color = new Color (1.0f, 1.0f, 0.5f, 0.25f);
 				} else {
-					this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (0.5f, 1.0f, 0.5f, 0.9f);
+					spr.color = new Color (0.5f, 1.0f, 0.5f, 0.9f);
 				}
 
 			} else {
-				this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (0.5f, 1.0f, 0.5f, 1.0f);
+				spr.color = new Color (0.5f, 1.0f, 0.5f, 1.0f);
 			}
-		} else if (obj.GetComponent<Field_Door> () != null) {
+		} else if (door != null) {
 
-			if (obj.GetComponent<Field_Door> ().open) {
-				this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (1.0f, 0.6f, 0.7f, 0.25f);
+			if (door.open) {
+				spr.color = new Color (1.0f, 0.6f, 0.7f, 0.25f);
 			} else {
-				this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (1.0f, 0.6f, 0.7f, 0.9f);
+				spr.color = new Color (1.0f, 0.6f, 0.7f, 0.9f);
 			}
 		} else {
-			this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (1.0f, 1.0f, 1.0f, 1.0f);
+			spr.color = new Color (1.0f, 1.0f, 1.0f, 1.0f);
 		}
 
 	

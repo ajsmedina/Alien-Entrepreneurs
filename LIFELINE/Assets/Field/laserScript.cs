@@ -5,29 +5,41 @@ using UnityEngine.SceneManagement;
 public class laserScript : MonoBehaviour {
 	public LineRenderer laserLineRenderer;
 	public GameObject partner;
-		public float laserWidth = 0.1f;
-		public float laserMaxLength = 5f;
+	public float laserWidth = 0.1f;
 
-		void Start() {
-			Vector3[] initLaserPositions = new Vector3[ 2 ] { Vector3.zero, Vector3.zero };
-			laserLineRenderer.SetPositions( initLaserPositions );
-			laserLineRenderer.SetWidth( laserWidth, laserWidth );
-		}
+	/**
+	 * Initialize laser values
+	 */
+	void Start() {
+		Vector3[] initLaserPositions = new Vector3[ 2 ] { Vector3.zero, Vector3.zero };
+		laserLineRenderer.SetPositions( initLaserPositions );
+		laserLineRenderer.SetWidth( laserWidth, laserWidth );
+	}
 
-		void Update() 
-		{
-		ShootLaserFromTargetPosition (transform.position);
-			
-		}
-
-		void ShootLaserFromTargetPosition( Vector3 targetPosition )
+	/**
+	 * Update laser properties
+	 */
+	void Update() 
 	{
-			Vector3 endPosition = partner.transform.position;
+		ShootLaser ();
+		
+	}
 
-		RaycastHit2D hit =  Physics2D.Raycast(transform.position, (endPosition - targetPosition).normalized, (endPosition - targetPosition).magnitude, LayerMask.GetMask("Insulator", "Player"));
+	/**
+	 * Shoot laser from current position to target
+	 */
+	void ShootLaser()
+	{
+		Vector3 endPosition = partner.transform.position;
+		Vector3 initialpos = transform.position;
+
+		//Set Raycast position. Only hit insulators and players
+		RaycastHit2D hit =  Physics2D.Raycast(transform.position, (endPosition - initialpos).normalized, (endPosition - initialpos).magnitude, LayerMask.GetMask("Insulator", "Player"));
 
 		if (hit.collider != null) {
 
+			//Lose level if raycast hits another player that is not the target.
+			//If it hits an insulator, set that as the endpoint of the laser.
 			if (hit.collider.gameObject.tag == "Player") {
 				if(hit.collider.gameObject.Equals(partner) == false)
 					SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
@@ -35,25 +47,10 @@ public class laserScript : MonoBehaviour {
 				endPosition = hit.point;
 			}
 		}
-		
-
-			laserLineRenderer.SetPosition( 0, targetPosition );
-			laserLineRenderer.SetPosition( 1, endPosition );
-		}
-
-	/**public Transform startPoint;
-	public Transform endPoint;
-	LineRenderer laserLine;
-	// Use this for initialization
-	void Start () {
-		laserLine = GetComponentInChildren<LineRenderer> ();
-		laserLine.SetWidth (.2f, .2f);
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		laserLine.SetPosition (0, startPoint.position);
-		laserLine.SetPosition (1, endPoint.position);
 
-	}*/
+		laserLineRenderer.SetPosition( 0, initialpos );
+		laserLineRenderer.SetPosition( 1, endPosition );
+	}
+
 }

@@ -50,12 +50,10 @@
      <Compile Include="Assets\Dialogue\Manage.cs" />
      <Compile Include="Assets\Dialogue\MessageEvent.cs" />
      <Compile Include="Assets\EmptyClass.cs" />
-     <Compile Include="Assets\Field\Camera2DFollow.cs" />
      <Compile Include="Assets\Field\Data_Field.cs" />
      <Compile Include="Assets\Field\Field_Button.cs" />
      <Compile Include="Assets\Field\Field_Collectable.cs" />
      <Compile Include="Assets\Field\Field_Door.cs" />
-     <Compile Include="Assets\Field\Field_Enemy.cs" />
      <Compile Include="Assets\Field\Field_Hazard.cs" />
      <Compile Include="Assets\Field\Field_Insulator.cs" />
      <Compile Include="Assets\Field\Field_Power.cs" />

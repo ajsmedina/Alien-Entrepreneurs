@@ -4,14 +4,11 @@ using System.Collections;
 public class Field_Teleporter : MonoBehaviour {
 	public GameObject target;
 
-	// Use this for initialization
+	/**
+	 * Initialize rotation of teleporters.
+	 */
 	void Start () {
 		this.gameObject.GetComponent<Rigidbody2D> ().angularVelocity = 20.0f;
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
 	
 	}
 }

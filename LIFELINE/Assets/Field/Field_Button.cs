@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Button_Types
+ * TOGGLE: Hit once to turn on, hit again to turn off.
+ * ONE_SHOT: Hit once to turn on. Cannot turn off.
+ * PRESS: Stay on button to keep it on. Turns off when object leaves.
+ */
 public enum Button_Types {TOGGLE, ONE_SHOT, PRESS};
 
 public class Field_Button : MonoBehaviour {
@@ -11,11 +17,10 @@ public class Field_Button : MonoBehaviour {
 	public Sprite buttonup;
 	public Sprite buttondown;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-
+	/**
+	 * Toggle or turn on button when it collides with another object.
+	 * coll: collider of other object
+	 */
 	void OnCollisionEnter2D (Collision2D coll){
 		if (coll.gameObject.tag == "Player" || coll.gameObject.tag == "Object") {
 			if (button_type == Button_Types.TOGGLE) {
@@ -26,6 +31,11 @@ public class Field_Button : MonoBehaviour {
 		}
 	}
 
+	/**
+	 * Unless the button is set to toggle, keep it on.
+	 * Ths function is necessary otherwise if one object leaves but one stays, it would turn off the button.
+	 * coll: collider of other object
+	 */
 	void OnCollisionStay2D (Collision2D coll){
 		if (coll.gameObject.tag == "Player" || coll.gameObject.tag == "Object") {
 			if (button_type != Button_Types.TOGGLE) {
@@ -34,6 +44,11 @@ public class Field_Button : MonoBehaviour {
 		}
 	}
 
+	/**
+	 * Turn off the button when let go if button is set to press.
+	 * Ths function is necessary otherwise if one object leaves but one stays, it would turn off the button.
+	 * coll: collider of other object
+	 */
 	void OnCollisionExit2D (Collision2D coll){
 		if ((coll.gameObject.tag == "Player" || coll.gameObject.tag == "Object") && button_type == Button_Types.PRESS) {
 			isOn = false;
@@ -41,14 +56,14 @@ public class Field_Button : MonoBehaviour {
 			
 	}
 	
-	// Update is called once per frame
+	/**
+	 * Change sprite of button based on current power value.
+	 */
 	void Update () {
 		if (isOn) {
 			this.gameObject.GetComponent<SpriteRenderer> ().sprite = buttondown;
-			//this.gameObject.GetComponent<SpriteRenderer> ().color = Color.cyan;
 		} else {
 			this.gameObject.GetComponent<SpriteRenderer> ().sprite = buttonup;
-			//this.gameObject.GetComponent<SpriteRenderer> ().color = Color.magenta;
 		}
 	}
 }

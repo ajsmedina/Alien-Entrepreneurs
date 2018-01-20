@@ -10,15 +10,22 @@ public class Field_Power : MonoBehaviour {
 
 	public bool down=false;
 
-	// Use this for initialization
+	/**
+	 * Initialize on value
+	 */
 	void Start () {
 		isOn = defOn;
 	}
 	
-	// Update is called once per frame
+	/**
+	 * Update power based on buttons pressed.
+	 */
 	void Update () {
 		bool pressed;
 
+		//Change on/off based on power type
+		//and: start true, short circuit to false if one button is off
+		//or: start false, short circuit to true if one button is on
 		if (and) {
 			pressed = true;
 			for (int i = 0; i < buttons.Length; i++) {
@@ -39,6 +46,8 @@ public class Field_Power : MonoBehaviour {
 			}
 		}
 
+
+		//Change power based on power type.
 		if (type == Button_Types.PRESS) {
 			isOn = pressed ? !defOn : defOn;
 		} else if (type == Button_Types.TOGGLE && pressed && !down) {

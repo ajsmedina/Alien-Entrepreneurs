@@ -6,20 +6,25 @@ public class Field_Insulator : MonoBehaviour {
 	public bool flip;
 	public bool insulate;
 
+	Field_Power pow;
 
-	// Use this for initialization
+	/**
+	 * Initialize pow 
+	 */
 	void Start () {
-	
+		pow = this.gameObject.GetComponent<Field_Power> ();
 	}
-	
-	// Update is called once per frame
+
+	/**
+	 * Modify whether or not this object is an insulator
+	 */
 	void Update () {
 		if (alwaysOn) {
 			insulate = true;
 		} else if (flip) {
-			insulate = !this.gameObject.GetComponent<Field_Power> ().isOn;
+			insulate = !pow.isOn;
 		} else {
-			insulate = this.gameObject.GetComponent<Field_Power> ().isOn;
+			insulate = pow.isOn;
 		}
 
 		this.gameObject.layer = insulate ? 8 : 0;
