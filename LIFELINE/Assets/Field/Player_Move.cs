@@ -10,6 +10,8 @@ public class Player_Move : MonoBehaviour {
 	public string[] keybind = { "w", "a", "s", "d" };
 	public GameObject field;
 
+	public int playerid;
+
 	Rigidbody2D rb;
 	bool teleporting=false;
 	public Vector2 rel_vel = Vector2.zero;
@@ -18,6 +20,7 @@ public class Player_Move : MonoBehaviour {
 	 * Initialize Variables
 	 */
 	void Start () {
+		field = GameObject.Find ("FieldManager");
 		rb = GetComponent<Rigidbody2D> ();
 	}
 
@@ -50,7 +53,6 @@ public class Player_Move : MonoBehaviour {
 		}
 
 	}
-
 	/** 
 	 * Move up to max speed
 	 * dir: direction to move (-1 left, 1 Right)
@@ -140,6 +142,10 @@ public class Player_Move : MonoBehaviour {
 			teleporting = false;
 		} else if (coll.gameObject.tag == "Collect") {
 			coll.gameObject.GetComponent<Field_Collectable> ().Collected ();
+		} else if (coll.gameObject.tag == "Hat") {
+			field.GetComponent<Data_Field>().Change_Hat(playerid, coll.gameObject.GetComponent<Field_Hat>().hatid);
+		} else if (coll.gameObject.tag == "Gate") {
+			SceneManager.LoadScene(coll.gameObject.GetComponent<Field_Gate>().levelname);
 		}
 	}
 
@@ -167,6 +173,14 @@ public class Player_Move : MonoBehaviour {
 			rel_vel = Vector2.zero;
 		}
 
+	}
+
+	/**
+	 * If character falls out of camera, jump to leader.
+	 * Used in HUB only
+	 */
+	void OnBecameInvisible(){
+		this.gameObject.transform.position = field.GetComponent<Data_Field>().getLeaderPos ();
 	}
 
 }
