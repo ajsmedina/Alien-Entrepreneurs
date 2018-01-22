@@ -95,7 +95,7 @@ public class Player_Move : MonoBehaviour {
 		string coltag = coll.gameObject.tag;
 
 		//Land on another platform
-		if ((coll.gameObject.tag == "Floor" ||coltag == "Floor_Move" ||coltag == "Player" ||coltag == "Object" || coltag == "Door" ) && transform.position.y > coll.gameObject.transform.position.y) {
+		if ((coll.gameObject.tag == "Floor" ||coltag == "Floor_Move" ||coltag == "Player" ||coltag == "Object" || coltag == "Door" )){// && transform.position.y > coll.gameObject.transform.position.y) {
 			jump_count = 0;
 			rb.velocity = Vector2.zero;
 
@@ -143,6 +143,7 @@ public class Player_Move : MonoBehaviour {
 		} else if (coll.gameObject.tag == "Collect") {
 			coll.gameObject.GetComponent<Field_Collectable> ().Collected ();
 		} else if (coll.gameObject.tag == "Hat") {
+			Debug.Log (playerid);
 			field.GetComponent<Data_Field>().Change_Hat(playerid, coll.gameObject.GetComponent<Field_Hat>().hatid);
 		} else if (coll.gameObject.tag == "Gate") {
 			SceneManager.LoadScene(coll.gameObject.GetComponent<Field_Gate>().levelname);
@@ -166,7 +167,7 @@ public class Player_Move : MonoBehaviour {
 	 */
 	void OnCollisionExit2D(Collision2D coll) {
 		string coltag = coll.gameObject.tag;
-		if ((coll.gameObject.tag == "Floor" ||coltag == "Floor_Move" ||coltag == "Player" ||coltag == "Object" || coltag == "Door" ) && transform.position.y > coll.gameObject.transform.position.y) {
+		if ((coll.gameObject.tag == "Floor" ||coltag == "Floor_Move" ||coltag == "Player" ||coltag == "Object" || coltag == "Door" )){// && transform.position.y > coll.gameObject.transform.position.y) {
 			jump_count++;
 		}
 		if (coll.gameObject.tag == "Floor_Move" ||coltag == "Object")  {
@@ -180,7 +181,8 @@ public class Player_Move : MonoBehaviour {
 	 * Used in HUB only
 	 */
 	void OnBecameInvisible(){
-		this.gameObject.transform.position = field.GetComponent<Data_Field>().getLeaderPos ();
+		if( field.GetComponent<Data_Field>().isHub)
+			this.gameObject.transform.position = field.GetComponent<Data_Field>().getLeaderPos ();
 	}
 
 }

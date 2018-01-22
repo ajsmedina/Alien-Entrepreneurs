@@ -78,7 +78,7 @@ public class Data_Field : MonoBehaviour {
 		players [3].GetComponent<Player_Move> ().keybind = keys [lst [3]];
 
 		if (isHub) {
-			leader = Random.Range (0, 3);
+			leader = Random.Range (0, 4);
 		}
 
 		Update_Hats ();
@@ -91,9 +91,13 @@ public class Data_Field : MonoBehaviour {
 		Vector2 screenPoint;
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			Time.timeScale = Time.timeScale == 0.0f ? 1.0f : 0.0f;
-		} else if (Input.GetKeyDown ("z"))
+		} else if (Input.GetKeyDown ("z")) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		}else if (Input.GetKeyDown ("x")){
 			SceneManager.LoadScene (SceneManager.GetActiveScene().name);
-
+			SceneManager.LoadScene ("HUB");
+		} 
+		
 	}
 
 	/**
