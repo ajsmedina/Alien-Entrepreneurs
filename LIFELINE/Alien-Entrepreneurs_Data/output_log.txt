@@ -14,9 +14,58 @@ Platform assembly: C:\Users\ajsme\Dropbox\Documents\GitHub\Alien-Entrepreneurs\L
 Loading C:\Users\ajsme\Dropbox\Documents\GitHub\Alien-Entrepreneurs\LIFELINE\Alien-Entrepreneurs_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\ajsme\Dropbox\Documents\GitHub\Alien-Entrepreneurs\LIFELINE\Alien-Entrepreneurs_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\ajsme\Dropbox\Documents\GitHub\Alien-Entrepreneurs\LIFELINE\Alien-Entrepreneurs_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.096 seconds
+- Completed reload, in  0.134 seconds
 Platform assembly: C:\Users\ajsme\Dropbox\Documents\GitHub\Alien-Entrepreneurs\LIFELINE\Alien-Entrepreneurs_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\ajsme\Dropbox\Documents\GitHub\Alien-Entrepreneurs\LIFELINE\Alien-Entrepreneurs_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 168.515137 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 52.692463 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 533.
+Total: 0.303633 ms (FindLiveObjects: 0.049180 ms CreateObjectMapping: 0.022237 ms MarkObjects: 0.222807 ms  DeleteObjects: 0.008553 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.595721 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 533.
+Total: 0.413113 ms (FindLiveObjects: 0.132144 ms CreateObjectMapping: 0.031646 ms MarkObjects: 0.241196 ms  DeleteObjects: 0.004704 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.579042 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 533.
+Total: 0.347254 ms (FindLiveObjects: 0.055167 ms CreateObjectMapping: 0.027797 ms MarkObjects: 0.256592 ms  DeleteObjects: 0.005987 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.762506 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 428.
+Total: 0.268138 ms (FindLiveObjects: 0.032501 ms CreateObjectMapping: 0.020527 ms MarkObjects: 0.202280 ms  DeleteObjects: 0.011974 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 4c14 -> priority: 1 
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[Data_Field] () [0x00000] in <filename unknown>:0 
+  at Player_Move.OnBecameInvisible () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[Data_Field] () [0x00000] in <filename unknown>:0 
+  at Player_Move.OnBecameInvisible () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[Data_Field] () [0x00000] in <filename unknown>:0 
+  at Player_Move.OnBecameInvisible () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+

@@ -9,6 +9,10 @@ public class Data_Global : MonoBehaviour {
 	 */
 	void Awake() {
 		DontDestroyOnLoad(this.gameObject);
+		if (FindObjectsOfType(GetType()).Length > 1)
+		{
+			Destroy(gameObject);
+		}
 	}
 
 	// Use this for initialization
