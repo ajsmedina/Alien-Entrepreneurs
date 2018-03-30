@@ -7,15 +7,23 @@ The machine that turns vegetables into hats. Work together to collect eggplants,
 money to rebuild your ship and get back home!
 
 Controls: 
+
 (Up, Left, Down, Right)
+
 BLUE ALIEN: WASD
+
 YELLOW ALIEN: TFGH
+
 RED ALIEN: IJKL
+
 GREEN ALIEN: Arrow Keys
 
 SPACE: Pause Game
+
 Z: Restart Level
+
 X: Return to HUB
+
 
 This game is currently a proof of concept. 
 
