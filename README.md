@@ -1,6 +1,5 @@
-#=========================================#
 Alien Entrepreneurs from the Wild Wild West
-#=========================================#
+
 A co-operative puzzle-platformer made in Unity.
 
 Play as a group of four aliens who crash landed in the Wild Wild West. The only part of your ship that works?
