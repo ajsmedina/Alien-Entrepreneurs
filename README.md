@@ -1,4 +1,4 @@
-Alien Entrepreneurs from the Wild Wild West
+# Alien Entrepreneurs from the Wild Wild West
 
 A co-operative puzzle-platformer made in Unity.
 
@@ -6,7 +6,10 @@ Play as a group of four aliens who crash landed in the Wild Wild West. The only 
 The machine that turns vegetables into hats. Work together to collect eggplants, create new hats, and raise enough
 money to rebuild your ship and get back home!
 
-Controls: 
+This project was fun because it required me to do play a variety of roles: programmer, level designer, artist, and more!
+It paid off since I love playing cooperative games with friends, and now I have my very own!
+
+# Controls: 
 
 (Up, Left, Down, Right)
 
@@ -25,7 +28,7 @@ Z: Restart Level
 X: Return to HUB
 
 
-This game is currently a proof of concept. 
+# This game is currently a proof of concept. 
 
 There are currently 6 levels and 7 hats available, but no sense of progression or saving.
 
