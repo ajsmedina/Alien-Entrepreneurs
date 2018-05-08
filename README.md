@@ -6,8 +6,14 @@ Play as a group of four aliens who crash landed in the Wild Wild West. The only 
 The machine that turns vegetables into hats. Work together to collect eggplants, create new hats, and raise enough
 money to rebuild your ship and get back home!
 
+# A One Man Band
+
 This project was fun because it required me to do play a variety of roles: programmer, level designer, artist, and more!
-It paid off since I love playing cooperative games with friends, and now I have my very own!
+It paid off since I love playing cooperative games with friends, and now I have my very own.
+
+Incorporatining Unity's built-in classes greatly helped with this project, and so did staying organized throughout the process.
+By commenting my code and making lists of what was done and what had to be done (which I did using Trello), I was able to manage
+my tasks and complete the levels I needed to finish the proof of concept.
 
 # Controls: 
 
